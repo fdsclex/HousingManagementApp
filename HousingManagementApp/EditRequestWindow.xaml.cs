@@ -55,13 +55,14 @@ namespace HousingManagementApp
             InhabitantCombo.DisplayMemberPath = "FullName";
             InhabitantCombo.SelectedValuePath = "Id";
 
-            EmployeeCombo.ItemsSource = _context.Employee.ToList();
+            EmployeeCombo.ItemsSource = _context.Employee.Where(e => e.RoleId == 3).ToList();
             EmployeeCombo.DisplayMemberPath = "FullName";
             EmployeeCombo.SelectedValuePath = "Id";
 
             StatusCombo.ItemsSource = _context.RequestStatus.ToList();
             StatusCombo.DisplayMemberPath = "Description";
             StatusCombo.SelectedValuePath = "Id";
+            StatusCombo.SelectedIndex = 0;
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)

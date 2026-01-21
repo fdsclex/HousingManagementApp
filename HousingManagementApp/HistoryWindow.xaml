@@ -26,14 +26,14 @@
                    HorizontalAlignment="Center" 
                    Margin="10" 
                    Text="История выполнения" 
-                   Style="{StaticResource PageTitle}"/>
+                   Style="{StaticResource PageHeaderText}"/>
 
         <!-- Фильтр -->
         <ComboBox x:Name="FilterCombo" 
                   Grid.Row="1" 
                   Margin="10" 
                   SelectionChanged="FilterCombo_SelectionChanged"
-                  Style="{StaticResource PageComboBox}">
+                  Style="{StaticResource ComboBox}">
             <!-- Здесь можно добавить элементы или привязку при необходимости -->
         </ComboBox>
 
